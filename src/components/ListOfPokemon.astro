@@ -1,0 +1,19 @@
+---
+import PokemonItem from './PokemonItem.astro'
+import { pokemons } from '../data/pokemons'
+
+---
+
+
+<ul class="grid grid-cols-2 md:grid-cols-3 gap-3 px-4">
+		{
+			pokemons.map(({ id, name, description, img }) => {
+				return (
+					<li>
+						<PokemonItem id={id} name={name} description={description} img={img}  />
+					</li>
+				)
+			})
+		}
+
+</ul>
